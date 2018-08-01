@@ -5,17 +5,23 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:server": "cd backend && nodemon server"
+    "start:server": "cd backend && nodemon server",
+    "start:client": "cd client && npm start",
+    "start:dev": "concurrently \"npm run-script start:server\" \"npm run-script start:client\"",
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
     "body-parser": "^1.18.3",
     "concurrently": "^3.6.1",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
     "express-validator": "^5.2.0",
-    "mongoose": "^5.2.4"
+    "mongoose": "^5.2.4",
+    "morgan": "^1.9.0"
   }
 }
